@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* temporary */
+.warning { color: red; font-size: 150%; font-weight: 900; }
+
+body {
+	width: 40em;
+	margin: 0 auto;
+	font-family: Noto Sans CJK KR, sans-serif;
+	font-size: 32px;
+	line-height: 2;
+}
+body, h1, h2, h3 {
+	font-weight: 100;
+}
+em {
+	font-style: normal;
+	border-bottom: 1px solid currentcolor;
+}
+strong {
+	font-weight: 400;
+}
+.annotated {
+	position: relative;
+	border-bottom: 1px dashed currentcolor;
+}
+.annotated > small {
+	position: absolute;
+	font-size: 50%;
+	left: 0;
+	bottom: 2em;
+	white-space: nowrap;
+}
+code {
+	font-family: inherit;
+	color: gray;
+}
+a, a.annotated {
+	color: green;
+	text-decoration: none;
+	border-bottom: 3px double currentcolor;
+}
+
