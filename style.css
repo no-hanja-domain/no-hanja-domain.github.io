@@ -41,3 +41,12 @@ a, a.annotated {
 	border-bottom: 3px double currentcolor;
 }
 
+ins {
+	text-decoration: inherit;
+	background-color: rgba(192, 255, 192, 0.5);
+}
+del {
+	text-decoration: inherit;
+	background-color: rgba(255, 192, 192, 0.5);
+}
+
