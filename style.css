@@ -6,12 +6,32 @@
 body {
 	width: 40em;
 	margin: 0 auto;
-	font-family: Noto Sans CJK KR, sans-serif;
-	font-size: 32px;
+	font-family: Noto Sans CJK KR, Source Han Sans, sans-serif;
+	font-size: 24px;
+	font-weight: 100;
 	line-height: 2;
 }
-body, h1, h2, h3 {
+h1 {
+	font-size: 2em;
 	font-weight: 100;
+	margin: 1rem 0;
+}
+h2 {
+	font-size: 1.6em;
+	font-weight: 100;
+	margin: 4rem 0 2rem 0;
+	text-align: center;
+}
+h3 {
+	font-size: 1.3em;
+	font-weight: 100;
+	margin: 1rem -0.6rem;
+	padding: 0.2rem 0.6rem;
+	background: #eef1f4;
+	border-radius: 0.8rem;
+}
+p {
+	margin: 1em 0;
 }
 em {
 	font-style: normal;
@@ -48,5 +68,11 @@ ins {
 del {
 	text-decoration: inherit;
 	background-color: rgba(255, 192, 192, 0.5);
+}
+
+@media screen and (max-width: 1024px) {
+	body {
+		font-size: 2.33vw;
+	}
 }
 
