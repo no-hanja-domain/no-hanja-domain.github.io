@@ -18,8 +18,7 @@ header>svg {
 	position: absolute;
 	left: 0;
 	top: 0;
-	background: red;
-	width: 100vw;
+	width: 100%;
 	height: 100px;
 }
 h1 {
@@ -85,17 +84,14 @@ del {
 	body {
 		font-size: 2.33vw;
 	}
-}
-
-@media screen and (max-width: 1000px) {
 	header {
-		margin-top: 10vw;
+		margin-top: 9.7656vw;
 	}
 	header>svg {
-		height: 10vw;
+		height: 9.7656vw;
 	}
 	header>svg>line {
-		stroke-width: 0.25vw;
+		stroke-width: 0.2441vw;
 	}
 }
 
