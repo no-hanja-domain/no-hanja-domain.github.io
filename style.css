@@ -11,6 +11,17 @@ body {
 	font-weight: 100;
 	line-height: 2;
 }
+header {
+	margin: 100px 0 0 0;
+}
+header>svg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: red;
+	width: 100vw;
+	height: 100px;
+}
 h1 {
 	font-size: 2em;
 	font-weight: 100;
@@ -73,6 +84,18 @@ del {
 @media screen and (max-width: 1024px) {
 	body {
 		font-size: 2.33vw;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	header {
+		margin-top: 10vw;
+	}
+	header>svg {
+		height: 10vw;
+	}
+	header>svg>line {
+		stroke-width: 0.25vw;
 	}
 }
 
