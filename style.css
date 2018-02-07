@@ -49,7 +49,7 @@ header.index>h1 {
 	font-size: 80px;
 	margin: 0 auto -0.4em auto;
 }
-h1>span {
+h1>.line1, h1>.line2 {
 	position: absolute;
 	display: inline-block;
 	color: white;
@@ -87,6 +87,9 @@ h1>.line2 {
 	right: 0;
 	top: 1.7em;
 	z-index: 1;
+}
+h1>.subtitle {
+	display: inline-block;
 }
 header.index>p {
 	width: 990px;
@@ -178,16 +181,15 @@ del {
 		font-size: 7.8125vw;
 		margin: 0;
 	}
-	h1>span {
-		position: relative;
-	}
 	h1>.line1 {
+		position: relative;
 		right: auto;
 		top: auto;
 		transform: skew(2deg, -2deg) translate(0.1em, 0);
 		z-index: 1;
 	}
 	h1>.line2 {
+		position: relative;
 		right: auto;
 		top: auto;
 		transform: skew(-6deg, 3deg) translate(-0.1em, 0);
@@ -203,6 +205,37 @@ del {
 		width: auto;
 		text-align: center;
 		font-size: 2.7344vw;
+	}
+	.annotated>small {
+		position: static;
+		font-size: 66.7%;
+		white-space: inherit;
+		opacity: 0.667;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	body {
+		font-size: 16px;
+	}
+	h1 {
+		font-size: 27px;
+	}
+	header.index>p {
+		width: auto;
+		text-align: center;
+		font-size: 19px;
+		margin: 0 20px;
+	}
+	main {
+		width: auto;
+		margin: 0 30px;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	header.index>h1 {
+		font-size: 32px;
 	}
 }
 
