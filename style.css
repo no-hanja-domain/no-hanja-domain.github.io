@@ -31,7 +31,7 @@ header>svg.address {
 	width: 100%;
 	height: 100px;
 }
-main {
+#main {
 	width: 40em;
 	margin: 0 auto;
 }
@@ -139,7 +139,7 @@ strong {
 	position: relative;
 	border-bottom: 1px dashed currentcolor;
 }
-.annotated > small {
+.annotated>small {
 	position: absolute;
 	font-size: 50%;
 	left: 0;
@@ -154,6 +154,73 @@ a, a.annotated {
 	color: green;
 	text-decoration: none;
 	border-bottom: 3px double currentcolor;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+ul>li {
+	position: relative;
+	margin: 0 0 0 1em;
+	padding: 0;
+}
+ul>li::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0.28em;
+	height: 0.3em;
+	top: 0.85em;
+	left: -0.8em;
+	background-color: #234e99;
+	border: 1px solid #234e99;
+}
+ol {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+ol>li {
+	position: relative;
+	margin: 0 0 0 1em;
+	padding: 0;
+	counter-increment: item-index;
+}
+ol>li::before {
+	content: counter(item-index) " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -1em;
+	font-weight: 400;
+	color: #234e99;
+}
+ul ul>li::before {
+	background-color: transparent;
+}
+ul.chars {
+	margin: 1em 0;
+	padding: 0 0 0 2.5%;
+}
+ul.chars>li {
+	float: left;
+	margin: 0 -1px -1px 0;
+	padding: 0;
+	width: 19%;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+ul.chars>li:nth-child(even) {
+	background-color: #eee;
+}
+ul.chars>li::before {
+	display: none;
+}
+ul.chars::after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 ins {
@@ -209,6 +276,8 @@ del {
 	.annotated>small {
 		position: static;
 		font-size: 66.7%;
+		left: inherit;
+		bottom: inherit;
 		white-space: inherit;
 		opacity: 0.667;
 	}
@@ -227,7 +296,7 @@ del {
 		font-size: 19px;
 		margin: 0 20px;
 	}
-	main {
+	#main {
 		width: auto;
 		margin: 0 30px;
 	}
