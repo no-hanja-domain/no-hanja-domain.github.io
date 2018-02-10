@@ -267,19 +267,21 @@ ul.chars::after {
 	display: block;
 	clear: both;
 }
-article {
+article.qna {
+}
+article.news {
 	padding: 1em 0;
 }
-article~article {
+article.news~article.news {
 	border-top: 1px solid #505050;
 }
-article>header {
+article.news>header {
 	text-align: center;
 }
-article>header>h2 {
+article.news>header>h2 {
 	margin: 0;
 }
-article>header>h2 a {
+article.news>header>h2 a {
 	color: #505050;
 	font-weight: 400;
 }
