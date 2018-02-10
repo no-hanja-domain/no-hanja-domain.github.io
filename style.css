@@ -8,12 +8,15 @@ html {
 	font-size: 24px;
 	font-weight: 100;
 	line-height: 2;
+	margin: 0;
+	padding: 0;
 }
 body {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
-header {
+body>header {
 	background-color: #505050;
 	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjQwIj48ZGVmcz48cGF0dGVybiBpZD0iaG9yaXotZmlsbCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iNTAlIiB3aWR0aD0iMjQiIGhlaWdodD0iNTAiPjxwYXRoIGQ9Ik0wIDBsMTIgMTJsMTIgLTEydjNsLTkgOWw5IDl2NmwtNCA0bDQgNHY2aC0yNHYtNmw0IC00bC00IC00di02bDkgLTlsLTkgLTl6IE0xMiAxNmwtNiA2bDYgNmw2IC02eiIgZmlsbD0id2hpdGUiIC8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2hvcml6LWZpbGwpIiAvPjwvc3ZnPg=='), linear-gradient(180deg, #303030, #505050);
 	background-repeat: no-repeat;
@@ -25,17 +28,39 @@ header {
 	line-height: 1;
 	position: relative;
 }
-header>svg.address {
+body>header>svg.address {
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100px;
+	overflow-x: hidden;
 }
 #main {
 	width: 40em;
 	margin: 0 auto;
 }
-h1 {
+body>footer {
+	background-color: #505050;
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjQwIj48ZGVmcz48cGF0dGVybiBpZD0iaG9yaXotZmlsbCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iNTAlIiB3aWR0aD0iMjQiIGhlaWdodD0iNTAiPjxwYXRoIGQ9Ik0wIDQwbDEyIC0xMmwxMiAxMnYtM2wtOSAtOWw5IC05di02bC00IC00bDQgLTR2LTZoLTI0djZsNCA0bC00IDR2Nmw5IDlsLTkgOXogTTEyIDI0bC02IC02bDYgLTZsNiA2eiIgZmlsbD0id2hpdGUiIC8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2hvcml6LWZpbGwpIiAvPjwvc3ZnPg=='), linear-gradient(0deg, #303030, #505050);
+	background-repeat: no-repeat;
+	background-position: top;
+	color: white;
+	margin: 2em 0 0 0;
+	padding: 40px 0 60px 0;
+	width: 100%;
+	line-height: 1;
+	position: relative;
+	box-shadow: 0 32000px 0 32000px #303030;
+}
+body>header a, body>footer a {
+	color: #ddd;
+}
+body>header>*, body>footer>* {
+	width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+}
+header>h1 {
 	position: relative;
 	width: 975px;
 	height: 100px;
@@ -49,14 +74,14 @@ header.index>h1 {
 	font-size: 80px;
 	margin: 0 auto -0.4em auto;
 }
-h1>.line1, h1>.line2 {
+h1 .line1, h1 .line2 {
 	position: absolute;
 	display: inline-block;
 	color: white;
 	text-shadow: 1px 1px 2px #505050;
 	padding: 0.3em 0.2em;
 }
-h1>.line1 {
+h1 .line1 {
 	background-color: #ff13a4;
 	box-shadow: 0.08em 0.08em rgba(0, 0, 0, 0.8);
 	transform: skew(-7deg, 2deg);
@@ -64,11 +89,11 @@ h1>.line1 {
 	top: 0.25em;
 	z-index: 2;
 }
-h1>.line1>u {
+h1 .line1>u {
 	text-decoration: none;
 	animation: 5s ease 5s infinite alternate-reverse fade;
 }
-h1>.line1>s {
+h1 .line1>s {
 	text-decoration: none;
 	position: absolute;
 	transform: translate(-100%, 0);
@@ -80,7 +105,7 @@ h1>.line1>s {
 	0% { opacity: 0.1; }
 	100% { opacity: 1; }
 }
-h1>.line2 {
+h1 .line2 {
 	background-color: #ffad00;
 	box-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.8);
 	transform: skew(-6deg, 5deg);
@@ -88,7 +113,7 @@ h1>.line2 {
 	top: 1.7em;
 	z-index: 1;
 }
-h1>.subtitle {
+h1 .subtitle {
 	display: inline-block;
 }
 header.index>p {
@@ -105,12 +130,6 @@ header.index>p strong {
 	padding: 0 0.2em;
 	margin: 0 -0.2em;
 }
-header.index>svg.separator {
-	position: absolute;
-	padding: 0;
-	margin: 0;
-	bottom: -1px;
-}
 h2 {
 	font-size: 1.6em;
 	font-weight: 100;
@@ -126,7 +145,22 @@ h3 {
 	border-radius: 0.8rem;
 }
 p {
-	margin: 1em 0;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+header.index>p {
+	width: 990px;
+	margin: 0 auto;
+	padding-bottom: 12px;
+	font-size: 28px;
+	line-height: 1.8;
+	letter-spacing: -0.02em;
+}
+header.index>p strong {
+	background-color: white;
+	color: #505050;
+	padding: 0 0.2em;
+	margin: 0 -0.2em;
 }
 em {
 	font-style: normal;
@@ -176,6 +210,17 @@ ul>li::before {
 	background-color: #234e99;
 	border: 1px solid #234e99;
 }
+nav ul {
+	margin: 1em 0;
+}
+nav ul>li {
+	display: inline;
+	margin: 0 1em 0 0;
+	padding: 0;
+}
+nav ul>li::before {
+	display: none;
+}
 ol {
 	margin: 0;
 	padding: 0;
@@ -222,6 +267,22 @@ ul.chars::after {
 	display: block;
 	clear: both;
 }
+article {
+	padding: 1em 0;
+}
+article~article {
+	border-top: 1px solid #505050;
+}
+article>header {
+	text-align: center;
+}
+article>header>h2 {
+	margin: 0;
+}
+article>header>h2 a {
+	color: #505050;
+	font-weight: 400;
+}
 
 ins {
 	text-decoration: inherit;
@@ -262,10 +323,10 @@ del {
 		transform: skew(-6deg, 3deg) translate(-0.1em, 0);
 		z-index: 2;
 	}
-	header>svg.address {
+	body>header>svg.address {
 		height: 9.7656vw;
 	}
-	header>svg.address>line {
+	body>header>svg.address>line {
 		stroke-width: 0.2441vw;
 	}
 	header.index>p {
