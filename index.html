@@ -36,7 +36,52 @@
 
 <p class="warning">이 주소를 외부에 공개하지 말아 주세요. 젭라.</p>
 
-<p>한자 도메인 저지까지 남은 시간: 34일 0시간 0분 0초 <a href="#timeline">이 시간은 무슨 뜻인가요?</a></p>
+<script type="text/html" id="timer">
+<header>한자 도메인 저지까지 남은 시간</header>
+<div class="timer"><output><span></span></output><output><span></span></output>일 <output><span></span></output><output><span></span></output>시간 <output><span></span></output><output><span></span></output>분 <output><span></span></output><output><span></span></output>초</div>
+<footer><a href="#timeline">이 시간은 무슨 뜻인가요?</a></footer>
+</script>
+<script>
+;(function() {
+	"use strict";
+	var template = document.getElementById('timer');
+	var timer = document.createElement('aside');
+	timer.className = 'timer';
+	timer.innerHTML = template.innerHTML;
+	template.parentNode.replaceChild(timer, template);
+	var slots = timer.querySelectorAll('.timer output>span');
+	var lastSecs = -1;
+	var lastDigits;
+	function tick() {
+		var secs = Math.max(1521331140000 - +new Date, 0) / 1000 | 0;
+		if (secs !== lastSecs) {
+			var mins = secs / 60 | 0; secs %= 60;
+			var hours = mins / 60 | 0; mins %= 60;
+			var days = hours / 24 | 0; hours %= 24;
+			var digits = [days / 10 | 0, days % 10, hours / 10 | 0, hours % 10, mins / 10 | 0, mins % 10, secs / 10 | 0, secs % 10];
+			for (var i = 0; i < 8; ++i) {
+				if (!lastDigits) {
+					slots[i].textContent = '\n' + digits[i];
+				} else if (lastDigits[i] !== digits[i]) {
+					slots[i].className = '';
+					(function(slot, lastDigit, digit) {
+						window.requestAnimationFrame(function() {
+							window.requestAnimationFrame(function() {
+								slot.textContent = lastDigit + '\n' + digit;
+								slot.className = 'animated';
+							});
+						});
+					})(slots[i], lastDigits[i], digits[i]);
+				}
+			}
+			lastDigits = digits;
+		}
+
+	}
+	setInterval(tick, 100);
+	tick();
+})()
+</script>
 
 <article class="qna" id="what-is-domain">
 <h2>도메인이 뭔가요?</h2>
