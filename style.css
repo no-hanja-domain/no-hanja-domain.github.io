@@ -70,6 +70,9 @@ header>h1 {
 	font-weight: 100;
 	line-height: 1;
 }
+header>h1 a {
+	border: 0;
+}
 header.index>h1 {
 	font-size: 80px;
 	margin: 0 auto -0.4em auto;
@@ -218,6 +221,9 @@ nav ul>li {
 	margin: 0 1em 0 0;
 	padding: 0;
 }
+nav ul>li:last-child {
+	margin-right: 0;
+}
 nav ul>li::before {
 	display: none;
 }
@@ -268,6 +274,20 @@ ul.chars::after {
 	clear: both;
 }
 article.qna {
+	background: rgba(255, 255, 192, 0.2);
+	border: 12px solid rgba(255, 255, 192, 0.8);
+	border-radius: 48px;
+	margin: 1em 0;
+	box-shadow: 0 0 0 4px rgba(192, 192, 128, 0.6);
+}
+article.qna>h2 {
+	background: rgba(255, 255, 192, 0.8);
+	margin: -12px 0 0 0;
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+	color: rgb(128, 128, 64);
+	font-size: 1.5em;
+	font-weight: 400;
 }
 article.news {
 	padding: 1em 0;
@@ -299,7 +319,7 @@ del {
 	body {
 		font-size: 2.33vw;
 	}
-	h1 {
+	header>h1 {
 		width: auto;
 		font-size: 3.90625vw;
 		text-align: center;
@@ -311,14 +331,14 @@ del {
 		font-size: 7.8125vw;
 		margin: 0;
 	}
-	h1>.line1 {
+	h1 .line1 {
 		position: relative;
 		right: auto;
 		top: auto;
 		transform: skew(2deg, -2deg) translate(0.1em, 0);
 		z-index: 1;
 	}
-	h1>.line2 {
+	h1 .line2 {
 		position: relative;
 		right: auto;
 		top: auto;
@@ -336,6 +356,16 @@ del {
 		text-align: center;
 		font-size: 2.7344vw;
 	}
+	footer>nav {
+		width: auto;
+		text-align: center;
+		font-size: 2.33vw;
+	}
+	footer>p {
+		width: auto;
+		text-align: center;
+		font-size: 2.33vw;
+	}
 	.annotated>small {
 		position: static;
 		font-size: 66.7%;
@@ -343,6 +373,15 @@ del {
 		bottom: inherit;
 		white-space: inherit;
 		opacity: 0.667;
+	}
+	article.qna {
+		border-width: 1.171875vw;
+		border-radius: 4.6875vw;
+	}
+	article.qna>h2 {
+		margin-top: -1.17875vw;
+		border-top-left-radius: 3.125vw;
+		border-top-right-radius: 3.125vw;
 	}
 }
 
@@ -358,6 +397,12 @@ del {
 		text-align: center;
 		font-size: 19px;
 		margin: 0 20px;
+	}
+	footer>nav {
+		font-size: 16px;
+	}
+	footer>p {
+		font-size: 16px;
 	}
 	#main {
 		width: auto;
