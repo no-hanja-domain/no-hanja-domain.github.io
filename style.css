@@ -336,6 +336,37 @@ article.qna>h2 {
 	font-size: 1.5em;
 	font-weight: 400;
 }
+article.qna>svg {
+	float: left;
+	background-color: #f2f2f2;
+	margin: -1px;
+	border: 1px solid #d9d9b3;
+}
+article.qna>p {
+	clear: left;
+	margin: 0.5em 12px;
+}
+article.qna>p.with-figure {
+	clear: none;
+	margin-left: 412px;
+}
+article.qna>p.more {
+	clear: none;
+	text-align: right;
+	font-size: 19.2px;
+}
+article.qna a.more {
+	font-size: 19.2px;
+	vertical-align: 2.4px;
+	background-color: #808040;
+	color: #fffff2;
+	border: 0;
+	border-radius: 0.2em;
+	padding: 0 0.2em;
+}
+article.qna a.more:hover, article.qna a.more:active {
+	background-color: #c0c080;
+}
 article.news {
 	padding: 1em 0;
 }
