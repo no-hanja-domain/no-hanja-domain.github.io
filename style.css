@@ -274,7 +274,7 @@ ul.chars::after {
 	clear: both;
 }
 aside.timer {
-	width: 24em;
+	width: 21.875em;
 	margin: 3em auto;
 }
 aside.timer>header {
@@ -295,8 +295,8 @@ div.timer {
 div.timer output {
 	display: inline-block;
 	overflow: hidden;
-	vertical-align: -24px;
-	height: 72px;
+	vertical-align: -0.5em;
+	height: 1.5em;
 	margin: 0;
 	font-weight: 900;
 	font-size: 2em;
@@ -320,18 +320,19 @@ div.timer output>span.animated {
 	100% { top: -1.5em; }
 }
 article.qna {
-	background: rgba(255, 255, 242);
-	border: 12px solid rgba(255, 255, 192, 0.8);
+	background: #fffff2;
+	border: 6px solid #d9d9b3;
 	border-radius: 48px;
 	margin: 1em 0;
-	box-shadow: 0 0 0 4px rgba(192, 192, 128, 0.6);
+	box-shadow: 0 0 0 4px #d9d9b3;
 }
 article.qna>h2 {
-	background: rgba(255, 255, 192, 0.8);
-	margin: -12px 0 0 0;
-	border-top-left-radius: 32px;
-	border-top-right-radius: 32px;
-	color: rgb(128, 128, 64);
+	background: #ffffcd;
+	margin: 0;
+	border-top-left-radius: 48px;
+	border-top-right-radius: 48px;
+	border-bottom: 3px solid #d9d9b3;
+	color: #808040;
 	font-size: 1.5em;
 	font-weight: 400;
 }
@@ -425,9 +426,8 @@ del {
 		border-radius: 4.6875vw;
 	}
 	article.qna>h2 {
-		margin-top: -1.17875vw;
-		border-top-left-radius: 3.125vw;
-		border-top-right-radius: 3.125vw;
+		border-top-left-radius: 4.6875vw;
+		border-top-right-radius: 4.6875vw;
 	}
 }
 
@@ -459,6 +459,9 @@ del {
 @media screen and (max-width: 410px) {
 	header.index>h1 {
 		font-size: 32px;
+	}
+	aside.timer {
+		width: auto;
 	}
 }
 
