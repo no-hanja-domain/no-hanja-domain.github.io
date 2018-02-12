@@ -329,6 +329,8 @@ article.qna {
 article.qna>h2 {
 	background: #ffffcd;
 	margin: 0;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
 	border-top-left-radius: 48px;
 	border-top-right-radius: 48px;
 	border-bottom: 3px solid #d9d9b3;
@@ -336,7 +338,7 @@ article.qna>h2 {
 	font-size: 1.5em;
 	font-weight: 400;
 }
-article.qna>svg {
+article.qna>.figure {
 	float: left;
 	background-color: #f2f2f2;
 	margin: -1px;
@@ -363,6 +365,7 @@ article.qna a.more {
 	border: 0;
 	border-radius: 0.2em;
 	padding: 0 0.2em;
+	white-space: nowrap;
 }
 article.qna a.more:hover, article.qna a.more:active {
 	background-color: #c0c080;
@@ -460,6 +463,9 @@ del {
 		border-top-left-radius: 4.6875vw;
 		border-top-right-radius: 4.6875vw;
 	}
+	article.qna p.more, article.qna a.more {
+		font-size: 1.875vw;
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -484,6 +490,17 @@ del {
 	#main {
 		width: auto;
 		margin: 0 30px;
+	}
+	article.qna>.figure {
+		float: none;
+		display: block;
+		width: 100%;
+	}
+	article.qna>p.with-figure {
+		margin-left: 12px;
+	}
+	article.qna p.more, article.qna a.more {
+		font-size: 12.8px;
 	}
 }
 
