@@ -50,7 +50,7 @@
 <h3 id="what-is-domain">도메인이 <em>정확히</em> 뭡니까?</h3>
 <p>도메인, 정확히는 <span class="annotated">도메인 이름<small>domain name</small></span>은 인터넷 주소, 즉 URL의 첫 머리를 이루는 이름입니다.</p>
 <p>보통 인터넷에서 한 컴퓨터에서 (여러 다른 컴퓨터나 장치를 거쳐) 다른 컴퓨터로 연결하는 데는 <span class="annotated">인터넷 프로토콜<small>IP (Internet Protocol)</small></span>이라는 것이 쓰이고, 이 프로토콜에서 쓰는 컴퓨터의 주소를 <span class="annotated">아이피 주소<small>IP address</small></span>라 합니다. 그런데 아이피 주소는 192.168.7.89같이 외우기도 어렵고 웹사이트를 대표할 수도 없으므로, 이름을 넘겨 주면 아이피 주소를 <span class="annotated">확인<small>resolve</small></span>해 주는 <span class="annotated">도메인 이름 시스템<small>DNS (Domain Name System)</small></span>을 두고, 거추장스러운 아이피 주소 대신 이름을 쓰게 되는데, 바로 이 이름이 도메인 이름인 것입니다.</p>
-<p>도메인 이름은 <code>kr.</code>이나 <code>example.com.</code>같이 글자들과 점 하나로 이루어진 <span class="annotated">라벨<small>label</small></span>로 이루어져 있습니다. 다들 알듯이 마지막 라벨의 점은 보통 생략합니다. 도메인 이름 시스템은 계층적으로 구성되어 있어서, 이를테면 <code>com.</code>이 <code>XXX.com.</code> 꼴의 모든 도메인을 확인할 권한을 가지고 있고, <code>example.com.</code>이 <code>XXX.example.com.</code> 꼴의 모든 도메인을 확인할 권한을 가지고 있습니다. 이 때문에 라벨 하나만으로 이루어진 도메인 이름을 <span class="annotated">최상위 도메인<small>TLD (top-level domain)</small></span>이라 하여 따로 관리하고, 이러한 도메인들의 목록을 <span class="annotated">루트 존<small>root zone</small></span>이라 부릅니다.</p>
+<p>도메인 이름은 <code>kr.</code>이나 <code>example.com.</code>같이 글자들과 점 하나로 이루어진 <span class="annotated">라벨<small>label</small></span>들로 이루어져 있습니다. 다들 알듯이 마지막 라벨의 점은 보통 생략합니다. 도메인 이름 시스템은 계층적으로 구성되어 있어서, 이를테면 <code>com.</code>이 <code>XXX.com.</code> 꼴의 모든 도메인을 확인할 권한을 가지고 있고, <code>example.com.</code>이 <code>XXX.example.com.</code> 꼴의 모든 도메인을 확인할 권한을 가지고 있습니다. 이 때문에 라벨 하나만으로 이루어진 도메인 이름을 <span class="annotated">최상위 도메인<small>TLD (top-level domain)</small></span>이라 하여 따로 관리하고, 이러한 도메인들의 목록을 <span class="annotated">루트 존<small>root zone</small></span>이라 부릅니다.</p>
 
 <h3 id="what-is-idn">도메인에 한글이나 한자가 들어갈 수 있습니까?</h3>
 <p>원래는 아니었습니다. 도메인은 본래 영문자(대소문자 구별 없음), 숫자, 하이픈만으로 이루어질 수 있었습니다. (길이 제한도 있습니다.)</p>
@@ -167,6 +167,7 @@
 <p>한자 전용 도메인은 한자 혼용 도메인에 비하면 최소한의 사용을 기대할 수 있습니다. 그러나 여기에는 몇 가지 난점이 있습니다.</p>
 <p><strong>한자를 필요하면 입력할 수 있는 한국어 환경의 비율은 줄고 있습니다.</strong> 현재 주요 스마트폰 운영 체제에서, 한국어 환경으로 한자를 바로 입력할 수 있는 경우는 없습니다. 별도 앱을 설치하거나, 중국어 또는 일본어 입력기를 빌려야 합니다. 읽기도 많이 하지만 입력도 제법 하는 도메인의 특성을 생각하면 좋은 상황이 아니지요.</p>
 <p><strong>외국인이 입력하는 한자는 한국식이 아닙니다.</strong> 비록 유니코드가 <span class="annotated">한중일 통합 한자<small>CJK unified ideograph</small></span>라고 (잘못) 부르는 한자 대통합을 잡음 끝에 이루어 내긴 했지만, 한 국가나 지역의 문자 코드에서 둘로 나뉜 문자는 유니코드에서도 나뉘어 있기 때문에(예: <code>靑</code>-<code>青</code><!-- TCA-CNS에서 나뉘어 있음 -->) 실제로는 제법 차이가 있습니다. 한국식 한자를 지원하는 것만으로는 이런 용례를 다룰 수 없습니다.</p>
+<p><strong>한자 도메인은 시각 장애인들의 접근성을 침해합니다.</strong> 시각 장애인들은 스크린 리더나 점자에 의존할 수밖에 없는데, 스크린 리더나 점자로는 한자를 표현할 수 없거나, 한자를 표현하는 데에 한계가 있습니다. 단순히 한자의 음만 알려준다면 원래 한자로 적혀 있는지 한글로 적혀 있는지 알 수가 없으며, 훈과 음을 알 수 있다 해도 어떤 한자인지 정확히 알 수 없는 경우가 있습니다(예: '클 석'은 奭일 수도 있고 碩일 수도 있음).</p>
 <p>따라서 한자 전용 도메인을 굳이 지원하고자 할 경우, 한국식 한자를 지원하는 것보다는 중국식 및 일본식 한자를 (그들의 기준에 맞춰서) 지원하는 것이 더 쓸모가 있을 것입니다.</p>
 
 <h3 id="side-effects-of-hanja-domain">한자 전용/혼용 도메인이 비한국어 한자 도메인에 영향을 줄 수도 있습니까?</h3>
@@ -280,7 +281,6 @@
 
 <h2 id="request">우리는 요구합니다</h2>
 <p><strong>현재 진행되고 있는 K-LGR 제안은 실용적으로나 기술적으로나 잘못되었기에 그대로 통과되어서는 안 됩니다!</strong> 이는 한국어 사용자에게나 다른 언어 사용자에게나 큰 부담을 지울 것입니다.</p>
-<p><strong>K-LGR 제안에서 한자와 관련된 내용을 한글과 비슷한 한자들의 목록으로만 제한하십시오.</strong> 이는 한자를 쓰는 다른 국가를 위한 최소한의 배려입니다.</p>
 <p><strong>한자 도메인을 정부 측에서 받아들이기 어려울 것이기에 조용히 처리하겠다는 발상을 버리십시오.</strong> 오차 범위도 제대로 안 나올 이상한 설문 조사로 정책을 정당화하지 말고, 좀 더 탄탄한 논리를 개발하여 정책 결정자가 아닌 국민들을 설득하는 것이 상식적인 발상일 것입니다.</p>
 
 <h2 id="authors">글쓴이들</h2>
