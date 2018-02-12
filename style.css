@@ -4,7 +4,7 @@
 .warning { color: red; font-size: 150%; font-weight: 900; }
 
 html {
-	font-family: Noto Sans CJK KR, Source Han Sans, sans-serif;
+	font-family: Noto Sans CJK KR, Source Han Sans, 맑은 고딕, Malgun Gothic, sans-serif;
 	font-size: 24px;
 	font-weight: 100;
 	line-height: 2;
@@ -370,6 +370,11 @@ article.qna a.more {
 article.qna a.more:hover, article.qna a.more:active {
 	background-color: #c0c080;
 }
+article.qna::after {
+	content: "";
+	display: table;
+	clear: both;
+}
 article.news {
 	padding: 1em 0;
 }
@@ -495,6 +500,9 @@ del {
 		float: none;
 		display: block;
 		width: 100%;
+	}
+	article.qna>img.figure {
+		height: auto;
 	}
 	article.qna>p.with-figure {
 		margin-left: 12px;
