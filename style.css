@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-/* temporary */
-.warning { color: red; font-size: 150%; font-weight: 900; }
-
 html {
 	font-family: Noto Sans CJK KR, Source Han Sans, 맑은 고딕, Malgun Gothic, sans-serif;
 	font-size: 24px;
@@ -275,7 +272,7 @@ ul.chars::after {
 }
 aside.timer {
 	width: 21.875em;
-	margin: 3em auto;
+	margin: 2em auto 3em auto;
 }
 aside.timer>header {
 	font-size: 0.8em;
