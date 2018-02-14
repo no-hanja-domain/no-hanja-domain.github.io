@@ -62,15 +62,16 @@
 			var hours = mins / 60 | 0; mins %= 60;
 			var days = hours / 24 | 0; hours %= 24;
 			var digits = [days / 10 | 0, days % 10, hours / 10 | 0, hours % 10, mins / 10 | 0, mins % 10, secs / 10 | 0, secs % 10];
+			var placeholder = '\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9';
 			for (var i = 0; i < 8; ++i) {
 				if (!lastDigits) {
-					slots[i].textContent = '\n' + digits[i];
+					slots[i].textContent = '\n' + digits[i] + placeholder;
 				} else if (lastDigits[i] !== digits[i]) {
 					slots[i].className = '';
 					(function(slot, lastDigit, digit) {
 						window.requestAnimationFrame(function() {
 							window.requestAnimationFrame(function() {
-								slot.textContent = lastDigit + '\n' + digit;
+								slot.textContent = lastDigit + '\n' + digit + placeholder;
 								slot.className = 'animated';
 							});
 						});
