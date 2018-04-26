@@ -48,8 +48,8 @@ nav > a { color: white; }
 	body { margin-top: 30px; }
 	nav { display: block; }
 	[lang|=en], [lang|=ko] { width: 100%; float: none; }
-	body[data-display-language|=ko] [lang|=en],
-	body[data-display-language|=en] [lang|=ko] { display: none; }
+	body[data-display-language|=ko] [lang]:not([lang|=ko]),
+	body[data-display-language|=en] [lang]:not([lang|=en]) { display: none; }
 }
 </style>
 <head>
