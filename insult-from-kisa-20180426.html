@@ -22,20 +22,20 @@ ol { margin: 0; padding: 0; }
 ul li { margin: 0.5em 0; padding: 0 0 0 1em; position: relative; box-sizing: border-box; }
 ul li::before { content: '•'; position: absolute; left: 0; }
 ol li { margin: 0.5em 0 0.5em 1.5em; padding: 0 0 0 0; position: relative; box-sizing: border-box; }
-ol.custom { counter-reset: list-item; list-style: none; }
-ol.custom li { margin-left: 0.5em; }
-ol.custom li::before { counter-increment: list-item; }
-ol.custom.one li::before { content: "1" counter(list-item, lower-latin) ". "; }
-ol.custom.four li::before { content: "4" counter(list-item, lower-latin) ". "; }
-ol.custom.five li::before { content: "5-" counter(list-item) ". "; }
-ol.custom.five-one li::before { content: "5-1" counter(list-item, lower-latin) ". "; }
-ol.custom.five-three li::before { content: "5-3" counter(list-item, lower-latin) ". "; }
-ol.custom.five-four li::before { content: "5-4" counter(list-item, lower-latin) ". "; }
-ol.custom.five-five li::before { content: "5-5" counter(list-item, lower-latin) ". "; }
-ol.custom.six li::before { content: "6" counter(list-item, lower-latin) ". "; }
-ol.custom.seven li::before { content: "7" counter(list-item, lower-latin) ". "; }
-ol.custom.eleven li::before { content: "11" counter(list-item, lower-latin) ". "; }
-ol.custom.twelve li::before { content: "12-" counter(list-item) ". "; }
+ol.custom { counter-reset: custom-index; list-style: none; }
+ol.custom>li { margin-left: 0.5em; }
+ol.custom>li::before { counter-increment: custom-index; }
+ol.custom.one>li::before { content: "1" counter(custom-index, lower-latin) ". "; }
+ol.custom.four>li::before { content: "4" counter(custom-index, lower-latin) ". "; }
+ol.custom.five>li::before { content: "5-" counter(custom-index) ". "; }
+ol.custom.five-one>li::before { content: "5-1" counter(custom-index, lower-latin) ". "; }
+ol.custom.five-three>li::before { content: "5-3" counter(custom-index, lower-latin) ". "; }
+ol.custom.five-four>li::before { content: "5-4" counter(custom-index, lower-latin) ". "; }
+ol.custom.five-five>li::before { content: "5-5" counter(custom-index, lower-latin) ". "; }
+ol.custom.six>li::before { content: "6" counter(custom-index, lower-latin) ". "; }
+ol.custom.seven>li::before { content: "7" counter(custom-index, lower-latin) ". "; }
+ol.custom.eleven>li::before { content: "11" counter(custom-index, lower-latin) ". "; }
+ol.custom.twelve>li::before { content: "12-" counter(custom-index) ". "; }
 blockquote.kisa { background: #fff0f0; border: 1px dashed #800000; margin: 0.5em 0; padding: 0 0.5em; }
 blockquote.kisa:before { content: "진흥원 답변"; color: #800000; font-size: 80%; }
 blockquote.kisa.\32 0180514:before { content: "2018년 5월 14일 진흥원 답변"; }
