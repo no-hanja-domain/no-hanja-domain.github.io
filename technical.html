@@ -56,7 +56,7 @@
 <p>2003년 즈음부터 <span class="annotated">국제화 도메인<small>internationalized domain name</small></span>이라 하여 도메인에 영문자 이외의 다른 문자를 넣는 것이 가능하게 되었습니다. 다만 기존의 도메인 이름 시스템을 바꿀 수는 없었기 때문에, 이런 문자가 들어 있는 도메인을 특정한 방법으로 영문자, 숫자, 하이픈만으로 이루어진 이름으로 바꾸는 편법을 씁니다. 이를테면 <code>한글.</code>은 <code>xn--bj0bj06e.</code>이 됩니다. 이런 변환은 오로지 사용자가 도메인을 입력하거나 사용자에게 도메인을 표시해 줄 때에만 일어납니다.</p>
 
 <h3 id="idn-homograph-attack">그럼 도메인에 아무 글자나 들어갈 수 있습니까?</h3>
-<p>아닙니다. 도메인에 아무 글자나 들어갈 수 있다면 엄청난 문제가 일어날 것입니다. 이 분야에서 이르길 <span class="annotated">동형이의자 공격<small>IDN homograph attack</small></span>이라고 하는 유명한 문제가 있습니다.</p>
+<p>아닙니다. 도메인에 아무 글자나 들어갈 수 있다면 엄청난 문제가 일어날 것입니다. 이 분야에서 이르길 <a href="https://en.wikipedia.org/wiki/IDN_homograph_attack" class="annotated">동형이의자 공격<small>IDN homograph attack</small></a>이라고 하는 유명한 문제가 있습니다.</p>
 <p>세상의 많은 문자들은 서로를 모르고 발전한 경우가 많아서, 지금 와서 보니 서로 비슷한 문자가 꽤 많이 있습니다. 영문자 <code>A</code>와 키릴 문자 <code>А</code>같이 그 뿌리가 같아서 비슷한 경우도 있고, 한글 <code>숲</code>과 한자 <code>金</code>같이 어쩌다 보니 비슷해진 경우도 있습니다. 이러한 것들을 동형이의자라 합니다.</p>
 <p>도메인 이름은 직접 입력하기도 하지만 보통 읽는 쪽이 많습니다. 하지만 이런 동형이의자가 들어간 도메인 이름은 눈으로 구분을 거의 할 수 없지만 서로 다르게 취급하기 때문에, 유명한 도메인과 비슷하게 생긴 다른 도메인을 등록해서 그 사이트인 양 <span class="annotated">행세<small>spoofing</small></span>할 수 있다는 문제가 있습니다.</p>
 <p>꼭 도메인 이름을 속이지 않아도 다른 사이트인 양 행세하는 방법은 여럿 있기 때문에 다양한 해결책들이 이미 나와 있습니다. 예를 들어서 아주 유명하거나 은행같이 중요한 사이트라면, 돈을 들여서 <span class="annotated">확장 검증 인증서<small>EV (extended validation) certificate</small></span>를 발급받으면 주소 창에 추가 정보를 표시할 수 있습니다. (다만 <a href="https://www.troyhunt.com/on-the-perceived-value-ev-certs-cas-phishing-lets-encrypt/">꼭 그런 것만도 아닌 것 같습니다</a>.) 그러나 이런 접근은 애초에 도메인만으로 사용자가 아무 것도 모르는 사이트에 접속할 수 있고 그래야만 하는 인터넷 환경에서는 많이 부족합니다.</p>
